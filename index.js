@@ -47,3 +47,9 @@ console.log(persona1);
 //   8. I generics
 // I generics in TypeScript sono utilizzati per creare funzioni e classi che possono lavorare con più tipi di dati. quindi UN GENERIC è un tipo passato come paramentro per un interfaccia, nella
 // definizione di interface si può definire un generic per il tipo di dato che si vuole passare
+function identita(arg) {
+    return arg;
+}
+console.log(identita('Hello'));
+console.log(identita(42));
+console.log(identita(true));
