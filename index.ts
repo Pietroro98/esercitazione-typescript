@@ -46,13 +46,12 @@ let test2: string | string[] | undefined = "pietro";
 // Le Interfaces in TypeScript sono utilizzate per definire la struttura di un oggetto o di una funzione.
 
 interface People {
-    firstName: string // obbligatorio
-    lastName: string // obbligatorio
-    modules: string[] // obbligatorio
-    region?: string // opzionale
+    firstName: string; // obbligatorio
+    lastName: string; // obbligatorio
+    modules: string[]; // obbligatorio
+    region?: string; // opzionale
   }
   
-
   let people1: People = {
     firstName: 'Mario',
     lastName: 'Rossi',
@@ -62,3 +61,40 @@ interface People {
   people1.region = "italia" // con il ? la variabile regione è opzionale e si può aggiungere successivamente
 
   console.log(people1);
+
+//   inoltre:
+interface PeopleCars {
+    name: string;
+    year: number;
+    carPlate: string;
+    color: string;
+  }
+  
+  interface PeopleCarsPremium extends PeopleCars {
+    model: string;
+    km: number; 
+    horsepower: number;
+  }
+  
+  const persona1: PeopleCarsPremium = {
+    name: 'Mario Rossi',
+    year: 1990,
+    carPlate: 'AB123CD',
+    color: 'black',
+    model: "Ferrari 488 GTB",
+    km: 5000,
+    horsepower: 170
+  };
+  
+  console.log(persona1);
+//   8. I generics
+// I generics in TypeScript sono utilizzati per creare funzioni e classi che possono lavorare con più tipi di dati. quindi UN GENERIC è un tipo passato come paramentro per un interfaccia, nella
+// definizione di interface si può definire un generic per il tipo di dato che si vuole passare
+
+ function identita<T>(arg: T): T {    //argomento di tipo T
+    return arg;
+  }
+  
+  console.log(identita<string>('Hello')); 
+  console.log(identita<number>(42)); 
+  console.log(identita<boolean>(true)); 

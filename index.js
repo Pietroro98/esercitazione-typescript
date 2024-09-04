@@ -34,3 +34,16 @@ let people1 = {
 };
 people1.region = "italia"; // con il ? la variabile regione è opzionale e si può aggiungere successivamente
 console.log(people1);
+const persona1 = {
+    name: 'Mario Rossi',
+    year: 1990,
+    carPlate: 'AB123CD',
+    color: 'black',
+    model: "Ferrari 488 GTB",
+    km: 5000,
+    horsepower: 170
+};
+console.log(persona1);
+//   8. I generics
+// I generics in TypeScript sono utilizzati per creare funzioni e classi che possono lavorare con più tipi di dati. quindi UN GENERIC è un tipo passato come paramentro per un interfaccia, nella
+// definizione di interface si può definire un generic per il tipo di dato che si vuole passare
